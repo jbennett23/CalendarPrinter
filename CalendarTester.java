@@ -133,6 +133,7 @@ public class CalendarTester {
    * This runs some tests on the generateCalendar method.
    */
   public static boolean testGenerateCalendar() {
+    boolean sept2019Works = true;
     String[][] sept2019 = {{"MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"},
         {".", ".", ".", ".", ".", ".", "1"}, {"2", "3", "4", "5", "6", "7", "8"},
         {"9", "10", "11", "12", "13", "14", "15"}, {"16", "17", "18", "19", "20", "21", "22"},
@@ -141,8 +142,8 @@ public class CalendarTester {
     for (int i = 0; i < sept2019.length; ++i) {
       for (int j = 0; j < sept2019[i].length; ++j) {
         if (CalendarPrinter.generateCalendar("Septemberzzzz", "2019")[i][j]
-            .equals(sept2019[i][j]) != true)
-          return false;
+            .equals(sept2019[i][j]) == false)
+          sept2019Works = false;
       }
     }
 
@@ -174,9 +175,7 @@ public class CalendarTester {
         }
       }
     }
-    if (may1776Works == false || june2020Works == false) {
-      return false;
-    }
+
     // Feb 2000, testing leap year
     boolean feb2000Works = true;
     String[][] feb2000 =
@@ -191,8 +190,10 @@ public class CalendarTester {
         }
       }
     }
+    // return false is any of the calendars generated don't match
     if (!sept2019Works || !may1776Works || !june2020Works || !feb2000Works)
       return false;
+    
     return true;
   }
 
@@ -203,19 +204,16 @@ public class CalendarTester {
    * @param args (unused)
    */
   public static void main(String[] args) {
-    System.out.println("It is " + testGetCentury() + " that getCentury method works!");
-    System.out.println(
-        "It is " + testGetYearWithinCentury() + " that getYearWithinCentury method" + " works!");
-    System.out.println("It is " + testGetIsLeapYear() + " that getIsLeapYear method works!");
-    System.out.println("It is " + testGetMonthIndex() + " that getMonthIndex method works!");
-    System.out.println("It is " + testGetNumberOfDaysInMonth() + " that getNumberofDaysInMonth"
+    System.out.println("It is " + testGetCentury() + " that the getCentury method works!");
+    System.out.println("It is " + testGetYearWithinCentury()
+        + " that the getYearWithinCentury method" + " works!");
+    System.out.println("It is " + testGetIsLeapYear() + " that the getIsLeapYear method works!");
+    System.out.println("It is " + testGetMonthIndex() + " that the getMonthIndex method works!");
+    System.out.println("It is " + testGetNumberOfDaysInMonth() + " that the getNumberofDaysInMonth"
         + " method works!");
-    System.out.println("It is " + testGetFirstDayOfWeekInMonth() + " that getFirstDayOfWeekInMonth"
-        + " method works!");
-    System.out
-        .println("It is " + testGenerateCalendar() + " that generateCalendar()" + " method works!");
-
+    System.out.println("It is " + testGetFirstDayOfWeekInMonth()
+        + " that the getFirstDayOfWeekInMonth" + " method works!");
+    System.out.println("It is " + testGenerateCalendar() + " that the generateCalendar() "
+        + "method works!");
   }
-
-
 }

@@ -32,11 +32,10 @@
 //
 /////////////////////////////// 80 COLUMNS WIDE ///////////////////////////////
 import java.util.Arrays;
-
 import java.util.Scanner;
 
 /**
- * This class develops a calendar of any given month and year. 
+ * This class develops a calendar of any given month and year.
  * 
  * @author Julia Bennett
  * @author Kareena Clendening
@@ -229,18 +228,18 @@ public class CalendarPrinter {
   public static String[][] generateCalendar(String month, String year) {
 
     int day = 1; // keeps track of the day of the month
-    int daysInMonth = getNumberOfDaysInMonth(month, year); 
+    int daysInMonth = getNumberOfDaysInMonth(month, year);
     int firstDayOfMonth = getFirstDayOfWeekInMonth(month, year);
-    
+
     // determines the number of rows in the calendar based on days in month and the first day
     int calRows = 1 + (daysInMonth + firstDayOfMonth) / DAYS_OF_WEEK.length;
 
-    // adds an additional row if the number of days spaces needed in calendar is not evenly 
+    // adds an additional row if the number of days spaces needed in calendar is not evenly
     // divisible by the days of the week
     if ((daysInMonth + firstDayOfMonth) % DAYS_OF_WEEK.length != 0)
       calRows += 1;
 
-    
+
     String[][] calArr = new String[calRows][DAYS_OF_WEEK.length];
     // fills in first row of array with the days of the week
     for (int j = 0; j < calArr[0].length; ++j) {
@@ -253,7 +252,7 @@ public class CalendarPrinter {
     // finishes the first week with numbers once the first day hits
     for (int j = firstDayOfMonth; j < DAYS_OF_WEEK.length; ++j) {
       calArr[1][j] = Integer.toString(day);
-      ++day; // keeps count of how many days have been filled in 
+      ++day; // keeps count of how many days have been filled in
     }
     for (int i = 2; i < calRows; ++i) {
       for (int j = 0; j < DAYS_OF_WEEK.length; ++j) {
@@ -272,16 +271,44 @@ public class CalendarPrinter {
 
     return calArr;
   }
+
+  /**
+   * This method prints out the formatting line to the console.
+   * 
+   */
+
+  public static void printLine() {
+    System.out.println("================================");
+  }
+
+  /**
+   * This method prints out the contents of the 2D array containing the formatted calendar to the
+   * console.
+   * 
+   * @param calendar contains the details of the calendar to be printed
+   */
+
+  public static void printCal(String[][] calendar) {
+    // iterates through each cell of the array
+    for (int i = 0; i < calendar.length; i++) {
+      for (int j = 0; j < calendar[i].length; j++) {
+        // prints contents of each cell to the console
+        System.out.print(calendar[i][j] + " ");
+      }
+      System.out.println();
+    }
+  }
+
   /**
    * This is the main method that develops a calendar based on the user inputs of the month and year
    * 
-   * @param args  (unused)
+   * @param args (unused)
    */
   public static void main(String args[]) {
-    Scanner sc = new Scanner(System.in);
+    Scanner sc = new Scanner(System.in); // obtains input from user
 
     System.out.println("Welcome to the Calendar Printer.");
-    System.out.println("================================");
+    printLine();
     // prompts the user to print out the month
     System.out.println("Enter the month to print: ");
     String month = sc.nextLine();
@@ -290,17 +317,9 @@ public class CalendarPrinter {
     String year = sc.nextLine();
     // prints out the calendar
     String[][] calendar = generateCalendar(month, year);
-    for (int i = 0; i < calendar.length; i++) {
-      for (int j = 0; j < calendar[i].length; j++) {
-        System.out.print(calendar[i][j] + " ");
-      }
-      System.out.println();
-    }
-    System.out.println("================================");
+    printCal(calendar);
+    printLine();
     System.out.println("Thanks, and have a nice day.");
-
-
-
   }
 }
 
