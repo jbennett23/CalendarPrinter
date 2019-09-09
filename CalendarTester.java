@@ -7,13 +7,13 @@
 //
 // Author: Kareena Clendening
 // Email: clendening@wisc.edu
-// Lecturer's Name: Mouna
+// Lecturer's Name: Mouna Ayari Ben Hadj Kacem
 //
 //////////////////// PAIR PROGRAMMERS COMPLETE THIS SECTION ///////////////////
 //
 // Partner Name: Julia Bennett
 // Partner Email: jbennett23@wisc.edu
-// Partner Lecturer's Name: Mouna
+// Partner Lecturer's Name: Mouna Ayari Ben Hadj Kacem
 //
 // VERIFY THE FOLLOWING BY PLACING AN X NEXT TO EACH TRUE STATEMENT:
 // _X__ Write-up states that pair programming is allowed for this assignment.
@@ -28,8 +28,8 @@
 // strangers, and others do. If you received no outside help from either type
 // of source, then please explicitly indicate NONE.
 //
-// Persons: (identify each person and describe their help in detail)
-// Online Sources: (identify each URL and describe their assistance in detail)
+// Persons: NONE
+// Online Sources: NONE
 //
 /////////////////////////////// 80 COLUMNS WIDE ///////////////////////////////
 /**
