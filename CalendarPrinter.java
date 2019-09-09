@@ -240,21 +240,27 @@ public class CalendarPrinter {
     if ((daysInMonth + firstDayOfMonth) % DAYS_OF_WEEK.length != 0)
       calRows += 1;
 
+    
     String[][] calArr = new String[calRows][DAYS_OF_WEEK.length];
+    // fills in first row of array with the days of the week
     for (int j = 0; j < calArr[0].length; ++j) {
       calArr[0][j] = DAYS_OF_WEEK[j];
     }
+    // fill in periods until the day of the 1st of the month
     for (int j = 0; j < firstDayOfMonth; ++j) {
       calArr[1][j] = ".";
     }
+    // finishes the first week with numbers once the first day hits
     for (int j = firstDayOfMonth; j < DAYS_OF_WEEK.length; ++j) {
       calArr[1][j] = Integer.toString(day);
-      ++day;
+      ++day; // keeps count of how many days have been filled in 
     }
     for (int i = 2; i < calRows; ++i) {
       for (int j = 0; j < DAYS_OF_WEEK.length; ++j) {
         calArr[i][j] = Integer.toString(day);
         ++day;
+        // once all the days of the month have been filled,
+        // the rest of the spaces are filled with periods
         if (day > daysInMonth + 1) {
           for (int k = j; k < DAYS_OF_WEEK.length; ++k) {
             calArr[i][k] = ".";
