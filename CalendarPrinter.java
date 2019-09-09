@@ -228,12 +228,15 @@ public class CalendarPrinter {
    */
   public static String[][] generateCalendar(String month, String year) {
 
-    int daysInMonth = getNumberOfDaysInMonth(month, year);
+    int day = 1; // keeps track of the day of the month
+    int daysInMonth = getNumberOfDaysInMonth(month, year); 
     int firstDayOfMonth = getFirstDayOfWeekInMonth(month, year);
+    
     // determines the number of rows in the calendar based on days in month and the first day
     int calRows = 1 + (daysInMonth + firstDayOfMonth) / DAYS_OF_WEEK.length;
-    int day = 1;
-    // adds an additional row if there is a remainder
+
+    // adds an additional row if the number of days spaces needed in calendar is not evenly 
+    // divisible by the days of the week
     if ((daysInMonth + firstDayOfMonth) % DAYS_OF_WEEK.length != 0)
       calRows += 1;
 
@@ -264,7 +267,7 @@ public class CalendarPrinter {
     return calArr;
   }
   /**
-   * This is the main method that develops a calendar based on the user inputs of the month and year.
+   * This is the main method that develops a calendar based on the user inputs of the month and year
    * 
    * @param args  (unused)
    */
