@@ -1,18 +1,18 @@
 
 //////////////////// ALL ASSIGNMENTS INCLUDE THIS SECTION /////////////////////
 //
-// Title: (descriptive title of the program making use of this file)
-// Files: (a list of all source files used by that program)
-// Course: (course number, term, and year)
+// Title: CalendarPrinter
+// Files: CalendarTester.java, CalendarPrinter.java
+// Course: CS 300 Fall 2019
 //
-// Author: Kareena Clendening
-// Email: clendening@wisc.edu
+// Author: Julia Bennett
+// Email: jbennett23@wisc.edu
 // Lecturer's Name: Mouna Ayari Ben Hadj Kacem
 //
 //////////////////// PAIR PROGRAMMERS COMPLETE THIS SECTION ///////////////////
 //
-// Partner Name: Julia Bennett
-// Partner Email: jbennett23@wisc.edu
+// Partner Name: Kareena Clendening
+// Partner Email: clendening@wisc.edu
 // Partner Lecturer's Name: Mouna Ayari Ben Hadj Kacem
 //
 // VERIFY THE FOLLOWING BY PLACING AN X NEXT TO EACH TRUE STATEMENT:
