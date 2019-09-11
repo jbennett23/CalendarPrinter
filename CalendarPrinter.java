@@ -27,8 +27,8 @@
 // strangers, and others do. If you received no outside help from either type
 // of source, then please explicitly indicate NONE.
 //
-// Persons: (identify each person and describe their help in detail)
-// Online Sources: (identify each URL and describe their assistance in detail)
+// Persons: NONE
+// Online Sources: NONE
 //
 /////////////////////////////// 80 COLUMNS WIDE ///////////////////////////////
 import java.util.Scanner;
@@ -88,21 +88,18 @@ public class CalendarPrinter {
   public static boolean getIsLeapYear(String yearString) {
     int year = Integer.parseInt(yearString);
     boolean leap;
-    if (year % 4 == 0) {
-      if (year % 100 == 0) {
-        // year is divisible by 400, hence the year is a leap year
-        if (year % 400 == 0)
-          leap = true;
-        else
-          leap = false;
-      } else
-        leap = true;
-    } else
+    // determines if year is a leap year according to definition of a leap year
+    if (year % 4 != 0) 
       leap = false;
+    else if (year % 100 != 0) 
+      leap = true;
+    else if (year % 400 != 0) 
+      leap = false;
+    else 
+      leap = true;
+    
     return leap;
   }
-
-  // Note implementation tips in Appendix I below.
 
   /**
    * Converts the name or abbreviation for any month into the index of that month's abbreviation
