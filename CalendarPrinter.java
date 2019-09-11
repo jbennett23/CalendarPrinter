@@ -1,18 +1,18 @@
 //////////////////// ALL ASSIGNMENTS INCLUDE THIS SECTION /////////////////////
 //
-// Title: (descriptive title of the program making use of this file)
-// Files: (a list of all source files used by that program)
-// Course: (course number, term, and year)
+// Title: CalendarPrinter
+// Files: CalendarPrinter.java, CalendarTester.java
+// Course: CS 300 Fall 2019
 //
-// Author: Kareena Clendening
-// Email: clendening@wisc.edu
-// Lecturer's Name: Mouna
+// Author: Julia Bennett
+// Email: jbennett23@wisc.edu
+// Lecturer's Name: Mouna Ayari Ben Hadj Kacem
 //
 //////////////////// PAIR PROGRAMMERS COMPLETE THIS SECTION ///////////////////
 //
-// Partner Name: Julia Bennet
-// Partner Email: jbennett23@wisc.edu
-// Partner Lecturer's Name: Mouna
+// Partner Name: Kareena Clendening
+// Partner Email: clendening@wisc.edu
+// Partner Lecturer's Name: Mouna Ayari Ben Hadj Kacem
 //
 // VERIFY THE FOLLOWING BY PLACING AN X NEXT TO EACH TRUE STATEMENT:
 // __X_ Write-up states that pair programming is allowed for this assignment.
@@ -31,7 +31,6 @@
 // Online Sources: (identify each URL and describe their assistance in detail)
 //
 /////////////////////////////// 80 COLUMNS WIDE ///////////////////////////////
-import java.util.Arrays;
 import java.util.Scanner;
 
 /**
